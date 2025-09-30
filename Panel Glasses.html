@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Glasses - Solar Powered Eyewear</title>
+    <link rel="icon" type="image/x-icon" href="logo.png"> 
+    <!-- <link rel="stylesheet" href="../home/css/css.css"> -->
+    <link rel="stylesheet" href="../home/css/all.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        /* Fixed Navigation */
+        /* .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 15px 5%;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+         */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+        
+        .logo span:first-child {
+            color: #333;
+        }
+        
+        .logo span:last-child {
+            color: #4CAF50;
+        }
+        
+        /* .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+         */
+         /* Reset Styles */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+         font-family: 'Arial', sans-serif;
+        }
+
+         /* Navbar Styles */
+        nav {
+          background-color: white;
+          padding: 15px 0;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          width: 100%;
+        }
+
+        .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        }
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4CAF50; /* Pink color for hover */
+}
+
+.home-link {
+    color: #4CAF50; /* Pink color for Home */
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+        .login-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 20px 5%;
+        }
+        
+        /* Home Page */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .hero-text h1 span {
+            color: #4CAF50;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #666;
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .cta-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 50px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .add-to-cart {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin: 20px 0;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #45a049;
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* About Page */
+        .about-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 50px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .about-section h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Cart Page */
+        .cart-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 50px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .cart-section h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        
+        .item-details {
+            flex: 1;
+        }
+        
+        .item-details h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .item-price {
+            font-weight: bold;
+            color: #4CAF50;
+            font-size: 18px;
+        }
+        
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .quantity-btn {
+            background-color: #f0f0f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .quantity-btn:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .quantity {
+            margin: 0 15px;
+            font-size: 16px;
+            min-width: 20px;
+            text-align: center;
+        }
+        
+        .remove-btn {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .remove-btn:hover {
+            background-color: #ff3333;
+        }
+        
+        .cart-total {
+            text-align: right;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        
+        .checkout-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            float: right;
+        }
+        
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+        
+        /* Page Content (hidden by default) */
+        .page-content {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .about-image {
+                min-width: 100%;
+            }
+            
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .cart-item img {
+                margin-bottom: 15px;
+            }
+            
+            .remove-btn {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <nav>
+        <div class="nav-container">
+            <a href="../home/home.html" class="home-link">Home</a>
+            <div class="nav-links">
+                <a href="../Arwa& Youanna/Panel Glasses.html">Solar glasses</a>
+                <a href="../carol&menna/Untitled-12.html">Micro</a>
+                <a href="../Rofida Hatem/ROFIDA -hatem.html">Solar chimney</a>
+                <a href="../Sohaila/gh.html">Marketplace</a>
+                <a href="../Shahd & Salma/sustainiverse login page/html.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page-content active">
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>INNOVATIVE <span>SOLAR PANEL GLASSES</span></h1>
+                    <p>How much solar energy is wasted every day? And do you think it is possible to protect our eyes and at the same time, harvest clean solar energy? That is exactly what our product, the Panel-Glasses do. It's a solar panel in glasses that collect and store solar energy as electric energy for later use.</p>
+                    <p>It provides a great solution for many situations when we need electricity and can't find it. It may be used in rural places or busy cities, it can literally be used everywhere and time. It may used to power different devices like laptops and phones.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="woman with glasses.avif" alt="Woman wearing Panel Glasses">
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <h2>Wanna Buy our Product??</h2>
+                <button class="add-to-cart">Add To Cart</button>
+                <div class="contact-info">
+                    Contact us at: (+20 120 175 6300), (+201201756300)
+                </div>
+            </section>
+        </div>
+        
+        <!-- About Page -->
+        <div id="about" class="page-content">
+            <section class="about-section">
+                <h1>About Panel Glasses</h1>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Panel Glasses is a leading manufacturer of innovative solar panel glasses. Our mission is to provide high-quality eyewear that integrates solar panel technology, offering both style and functionality. Our glasses are designed for individuals over the age of 12, catering to those who value sustainability and modern design.</p>
+                        <p>We are dedicated to revolutionizing the eyewear industry by promoting eco-friendly and energy-efficient products. Explore our collection and join the solar-powered eyewear movement today.</p>
+                        <p>Our product represents the perfect combination of renewable energy technology and everyday fashion accessories. By wearing Panel Glasses, you're not just protecting your eyes from harmful UV rays - you're also harvesting clean energy that can power your devices.</p>
+                        <p>The built-in battery stores the collected energy, allowing you to charge your devices whenever you need. With our proprietary technology, we've managed to create glasses that are lightweight, comfortable, and efficient at energy collection.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="cat.avif" alt="Panel Glasses Technology">
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Cart Page -->
+        <div id="cart" class="page-content">
+            <section class="cart-section">
+                <h1>Your Shopping Cart</h1>
+                <div class="cart-item">
+                    <img src="man with glasses.avif" alt="Panel Glasses">
+                    <div class="item-details">
+                        <h3>Panel Glasses - Solar Edition</h3>
+                        <div class="item-price">$199.99</div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-btn">Remove</button>
+                </div>
+                
+                <div class="cart-total">
+                    <strong>Total: $199.99</strong>
+                </div>
+                
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </section>
+        </div>
+        
+        <!-- Contact Page -->
+        <div id="contact" class="page-content">
+            <section class="about-section">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you! Whether you have questions about our products, need support, or want to explore partnership opportunities, our team is here to help.</p>
+                
+                <h3 style="margin-top: 30px;">Customer Support</h3>
+                <p>Phone: (+201060328023), (+201201756300)</p>
+                <p>Email: <a href="arwaalaa859@gnail.com">arwaalaa859@gnail.com</a>, <a href="youanna.1124613@stemmaadi.moe.edu.eg">youanna.1124613@stemmaadi.moe.edu.eg</a></p>
+                <p>Business Hours: Monday-Friday, 9AM-5PM EST</p>
+                
+                <h3 style="margin-top: 30px;">Visit Our Website</h3>
+                <p><a href="" target="_blank">www.innovativeenergysources.com</a></p> <!--Put the website link here -->
+            </section>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Panel Glasses. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // Product price (in dollars)
+        const productPrice = 199.99;
+        
+        // Function to update cart total
+        function updateCartTotal() {
+            const quantity = parseInt(document.querySelector('.quantity').textContent);
+            const total = (productPrice * quantity).toFixed(2);
+            document.querySelector('.cart-total strong').textContent = `Total: $${total}`;
+        }
+        
+        // Navigation functionality
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Hide all pages
+                document.querySelectorAll('.page-content').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page
+                const pageId = this.getAttribute('data-page');
+                document.getElementById(pageId).classList.add('active');
+                
+                // Update active link (optional visual feedback)
+                document.querySelectorAll('.nav-link').forEach(navLink => {
+                    navLink.classList.remove('active-link');
+                });
+                this.classList.add('active-link');
+            });
+        });
+        
+        // Add to cart button functionality
+        document.querySelector('.add-to-cart').addEventListener('click', function() {
+            // Show cart page
+            document.querySelectorAll('.page-content').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('cart').classList.add('active');
+            
+            // Update navigation (optional)
+            document.querySelectorAll('.nav-link').forEach(navLink => {
+                navLink.classList.remove('active-link');
+            });
+            document.querySelector('[data-page="cart"]').classList.add('active-link');
+            
+            // Reset quantity to 1 when adding to cart
+            document.querySelector('.quantity').textContent = '1';
+            updateCartTotal();
+        });
+        
+        // Quantity controls in cart
+        document.querySelectorAll('.quantity-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const quantityElement = this.parentElement.querySelector('.quantity');
+                let quantity = parseInt(quantityElement.textContent);
+                
+                if (this.textContent === '+' && quantity < 10) {
+                    quantity++;
+                } else if (this.textContent === '-' && quantity > 1) {
+                    quantity--;
+                }
+                
+                quantityElement.textContent = quantity;
+                updateCartTotal();
+            });
+        });
+        
+        // Remove item from cart
+        document.querySelector('.remove-btn').addEventListener('click', function() {
+            if (confirm('Are you sure you want to remove this item from your cart?')) {
+                // In a real implementation, you would remove the item from the cart array
+                // For this demo, we'll just reset the quantity and total
+                document.querySelector('.quantity').textContent = '1';
+                updateCartTotal();
+                
+                // Optional: Show a message that the cart is empty
+                // alert('Item removed from cart');
+            }
+        });
+        
+        // Initialize cart total on page load
+        updateCartTotal();
+    </script>
+</body>
+</html>
