@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioVolt | Microbial Fuel Cells</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #045174;  /* Science green */
+            --secondary: #011e69; /* Dark teal */
+            --accent: #75c3fe;   /* Amber for highlights */
+            --light: #F5F5F6;    /* Light gray background */
+            --dark: #263238;     /* Dark text */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: white; /* Plain white background */
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: var(--primary);
+            color: #045174;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: #263238;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            font-weight: bold;
+        }
+
+        /* Hero Section (No background image) */
+        .hero {
+            background: var(--light);
+            color: var(--dark);
+            text-align: center;
+            padding: 4rem 0;
+            border-bottom: 1px solid #045174;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* How It Works */
+        .section-title {
+            text-align: center;
+            margin: 3rem 0;
+            color: var(--secondary);
+        }
+        .mfc-diagram {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 5px;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .step {
+            flex: 1 1 300px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+        .step h3 {
+            color: var(--primary);
+        }
+
+        /* Research Highlights */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .research-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .research-card h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        /* Contact Form */
+        .contact {
+            background: var(--light);
+            padding: 3rem 0;
+            border-top: 1px solid #e0e0e0;
+            font-weight: bold;
+
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-weight: bold;
+
+        }
+        .submit-btn {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        /* Navbar Styles */
+        nav {
+            background-color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+        
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #045174; /* Pink color for hover */
+        }
+        
+        .home-link {
+            color: #045174; /* Pink color for Home */
+            font-size: 18px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+    <style>
+        .circular-image {
+            width: 700px;       /* Set your desired width */
+            height: 400px;      /* Set your desired height */
+            /* border-radius: 200%; This makes the image circular */
+            object-fit:fill;  /* Ensures the image covers the area without distortion */
+            border: 3px solid #090042; /* Optional: adds a border around the circle */
+        }
+    </style>
+    <style>
+        .login-btn {
+            background-color: #75b9ed; /* Green */
+            color: rgb(12, 12, 12);
+            padding: 20px 40px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #100052; /* Darker green on hover */
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../home/home.html" class="home-link">Home</a>
+            <div class="nav-links">
+                <a href="../Arwa& Youanna/Panel Glasses.html">Solar glasses</a>
+                <a href="../carol&menna/Untitled-12.html">Micro</a>
+                <a href="../Rofida Hatem/ROFIDA -hatem.html">Solar chimney</a>
+                <a href="../Sohaila/gh.html">Marketplace</a>
+                <a href="../Shahd & Salma/sustainiverse login page/html.html">Login</a>
+            </div>
+        </div>
+    </nav>
+      </div>
+    <!-- <div class="container" style="display: flex; justify-content: flex-end;">
+        <button class="login-btn">Login</button>
+    </div> -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">BioVolt</div>
+                <div class="nav-links">
+                    <a href="#how-it-works">How It Works & Types</a>
+                    <a href="#research">Properties & Applications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (No background image) -->
+    <section class="hero">
+        <div class="container">
+            <h1><b><i>Microbiological Fuel Cells System</i></b></h1>
+            <p><i>Microbial fuel cell (MFC) is a kind of biochemical system/cell in which chemical energy is converted into electrical form by microbial activity (anaerobic digestion). The electric current is generated by a simple phenomenon of driving electrons through a circuit, produced during microbial oxidation of reduced substrates (electron donor) at anode toward oxidized compounds (electron acceptor) present at cathodic end. Various types of wastes (like food waste, soil and sediments, household waste, agricultural waste streams, and water waste) can be used as a substrate by electrogenic bacteria to produce bioelectricity through this system (Lee et al., 2019)</i></p>
+            <img src="micro system.png" alt="Circular Image" class="circular-image">
+            <a href="#how-it-works" class="btn">Explore MFCs</a>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="container">
+        <h2 class="section-title">How MFCs Work</h2>
+        <p><i>The working principle of microbial fuel cells is microbial electrogenesis. Microbial electrogenesis means the use of microorganisms to generate electrons. Once organic matter like wastewater or biodegradable material is introduced inside the anode chamber, microorganisms consume it as a food source. 
+
+            As byproducts, the electron releases during the metabolic processes. From the chamber, the electrons transfer to the anode electrode. From the anode electrode, the electrons flow to the cathode electrode through an external electric circuit. 
+            
+            The commonly used electron acceptor, oxygen, present in the cathode reduces. This reduction catalyzes the combination of electrons and protons to form water. This redox reaction completes the electron transfer cycle, creating an electric current that can power various applications.The following chemical reaction summarizes the overall process of microbial metabolism and electron transfer;
+        </i></p>
+        <sub><mark>Organic matter + Microbial metabolism → Electricity + Water + CO2.</mark></sub> <p><i><mark>The following equation shows the reduction of oxygen in the cathode chamber;</mark></i></p></sub> 
+    <p><i><mark><sub>O2 + 4H+ + 4e– → 2H2O [Eo = 1.23 V]</sub></mark></i></p>
+    <img src="system 1.png" alt="Circular Image" class="circular-image">
+        <div class="mfc-diagram">
+            <h3><i>MFCs materials</i></h3>
+            <p><i>1-cathod</i></p>
+            <p><i>2-anode</i></p>
+            <p><i>3-proton exchange membrane</i></p>
+            <p><i>4-external electric circuit</i></p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <h3>1-Upflow MFCs</h3>
+                <p><i>This type of MFCs are cylinder-shaped MFC. It has a cathode chamber at the top, and an anode at the bottom. Glass wool and glass bead layers help apportion both chambers. The substrate is provided at the bottom of the anode, which moves upward to the cathode and leaves at the top.</i></p>            </div>
+                <img src="up flow.png" alt="Circular Image" class="circular-image">
+                </div>
+                <div class="step">
+                <h3>2-single chamber MFCs</h3>
+                <p><i> In this type of MFCs, both anode and cathode electrode are present in the same chamber which is separated by ion-exchange membrane. The design of this MFCs is simple which reduces internal resistance. However, it can limit oxygen diffusion which affects the performance of the cell.</i></p>
+                <img src="single champer.jpg" alt="Circular Image" class="circular-image">
+            </div>
+            <div class="step">
+                <h3>3-double chamber MFCs</h3>
+                <p><i>It is the simplest and most common design of MFCs. One chamber is used as an anode and the other as a cathode, separated by PEM. Anode has the microorganism, and the cathode has an electron acceptor</i></p>
+                <img src="double champer.jpg" alt="Circular Image" class="circular-image">
+            </div>
+            <div class="step">
+                <h3>4-Mediator-based MFCs</h3>
+                <p><i>In this type of MFCs, redox facilitates electron transfer between the microbial biofilm on the anode and the cathode. The electrons travel from bacteria to anode with the help of the mediator.</i></p>
+                <img src="Mediator-based MFCs.jpg" alt="Circular Image" class="circular-image">
+            </div>
+            <div class="step">
+                <h3>5-Mediatorless MFCs</h3>
+                <p><i>This type of MFCs does not rely on external redox mediators. Instead, this method used naturally occurring exoelectrogens which directly transfer electrons to the anode. The cost of this operation may be lower due to its simple designs.</i></p>
+                <img src="mediatorless.png" alt="Circular Image" class="circular-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Highlights -->
+    <section id="research" class="container">
+        <h2 class="section-title">properties & Applications</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3><i>Advantages</i></h3>
+                <p><i>1-Clean Energy</i></p>
+                <p><i>2-Waste Water Treatment</i></p>
+                <p><i>3-Renewable Resource</i></p>
+                <p><i>4-Eco-Friendly</i></p>
+                <p><i>5-Education Tool</i></p>
+                <p><i>6-Potential for remote area</i></p>
+            </div>
+            <div class="research-card">
+                <h3>Disadvantages</h3>
+                <p><i>Expensive cost</i></p>
+                <p><i>Scale up challenges</i></p>
+                <p><i>Stability</i></p>
+                <p><i>Understanding microbial processes</i></p>
+                <p><i>Maintenance</i></p>
+            </div>
+            <div class="research-card">
+                <h3>Applications</h3>
+                <p><i>1-Waste water treatment</i></p>
+                <p><i>2-Remote sensors</i></p>
+                <p><i>3-Bioremediation</i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-form">
+                <form id="mfc-contact">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 sustainiverse _Renewable energy _MFCs</p>
+        </div>
+    </footer>
+
+    <!-- Simple JS for form submission -->
+    <script>
+        document.getElementById('mfc-contact').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will respond shortly.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
