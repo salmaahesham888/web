@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Chimney - Renewable Energy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://img.freepik.com/premium-photo/renewable-energy-background-with-green-energy-as-wind-turbines-solar-panels_770200-1745.jpg?w=2000');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            animation: moveBackground 100s linear infinite;
+            color: #fff;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.65);
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3495da;
+        }
+
+        .home-link {
+            color: #3495da;
+            font-size: 1.2em;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #3495da;
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 60px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        img {
+            display: block;
+            max-width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+            border: 3px solid #fff;
+        }
+
+        .chat-container {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            color: #000;
+        }
+
+        .chat-box {
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: white;
+        }
+
+        .chat-input {
+            width: calc(100% - 90px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3495da;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 10px;
+        }
+
+        button:hover {
+            background-color: #2a7bb8;
+        }
+
+        .user-message {
+            color: #0066cc;
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: #e6f2ff;
+            border-radius: 5px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        .bot-message {
+            color: #009933;
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: #e6ffe6;
+            border-radius: 5px;
+            display: inline-block;
+            max-width: 80%;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            
+            .chat-input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            button {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../home/home.html" class="home-link">Home</a>
+            <div class="nav-links">
+                <a href="../Arwa& Youanna/Panel Glasses.html">Solar glasses</a>
+                <a href="../carol&menna/Untitled-12.html">Micro</a>
+                <a href="../Rofida Hatem/ROFIDA -hatem.html">Solar chimney</a>
+                <a href="../Sohaila/gh.html">Marketplace</a>
+                <a href="../Shahd & Salma/sustainiverse login page/html.html">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Solar Chimney</h1>
+        <h2>Harnessing the Power of the Sun</h2>
+        <p>
+            A <strong>solar chimney</strong> is a structure that uses solar energy to generate electricity. It consists of a large glass collector at the base and a tall chimney in the center. As sunlight heats the air inside the collector, the hot air rises through the chimney. This rising air drives turbines placed at the base of the tower, generating electricity.
+        </p>
+        <img src="https://energyeducation.ca/wiki/images/thumb/6/61/Solarchimney2.png/720px-Solarchimney2.png" alt="Solar Chimney Diagram">
+        
+        <div class="chat-container">
+            <h2 style="color: #3495da;">Ask About Solar Chimneys</h2>
+            <div class="chat-box" id="chat-box"></div>
+            <div style="display: flex;">
+                <input type="text" id="question-input" class="chat-input" placeholder="Type your question here..." onkeypress="if(event.key === 'Enter') askQuestion()">
+                <button onclick="askQuestion()">Ask</button>
+            </div>
+            <p style="font-size: 14px; color: #666; margin-top: 10px;">
+                Try asking: "What is solar chimney?", "How does it work?", or "What are the benefits?"
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const questions = {
+            "what is solar chimney": "A solar chimney is a structure that uses solar energy to generate electricity. It consists of a large glass collector at the base and a tall chimney in the center.",
+            "how does solar chimney work": "A solar chimney works by heating air inside a collector, which then rises through the chimney. This rising air drives turbines to generate electricity.",
+            "benefits of solar chimney": "Solar chimneys provide clean energy, require no fuel, produce no pollution, and can operate in dry, sunny areas.",
+            "disadvantages of solar chimney": "They require large land areas, have high initial costs, and depend on sunlight availability.",
+            "where are solar chimneys used": "They're used in sunny regions like deserts, particularly in Spain, Australia, and some African countries.",
+            "how tall are solar chimneys": "Solar chimneys are typically very tall, often between 200-1000 meters high to create sufficient updraft.",
+            "what is the efficiency": "Solar chimneys have relatively low efficiency (about 1-2%) but can generate large amounts of power due to their size.",
+            "who invented solar chimney": "The concept was first proposed by Spanish engineer Isidoro Cabanyes in 1903 and later developed by German engineer Jörg Schlaich."
+        };
+
+        function askQuestion() {
+            const questionInput = document.getElementById("question-input");
+            const chatBox = document.getElementById("chat-box");
+            const question = questionInput.value.toLowerCase().trim();
+
+            if (!question) {
+                return;
+            }
+
+            // Add user question to chat
+            chatBox.innerHTML += `<div class="user-message"><strong>You:</strong> ${questionInput.value}</div>`;
+            
+            // Scroll to bottom
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Check if question exists in database
+            let answer = questions[question];
+            
+            if (!answer) {
+                // Try to find similar questions
+                const similarQuestions = Object.keys(questions).filter(q => 
+                    q.includes(question) || question.includes(q.split(' ')[0])
+                ).slice(0, 2);
+                
+                if (similarQuestions.length > 0) {
+                    answer = "I'm not sure about that exact question. Did you mean:<br><br>" + 
+                        similarQuestions.map(q => 
+                            `• "${q}"`).join('<br>');
+                } else {
+                    answer = "Sorry, I don't have an answer for that. Here are some questions I can answer:<br><br>" +
+                        "• What is solar chimney?<br>" +
+                        "• How does solar chimney work?<br>" +
+                        "• What are the benefits?<br>" +
+                        "• What are the disadvantages?";
+                }
+            }
+
+            // Add bot response after short delay
+            setTimeout(() => {
+                chatBox.innerHTML += `<div class="bot-message"><strong>Bot:</strong> ${answer}</div>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+
+            // Clear input
+            questionInput.value = '';
+            questionInput.focus();
+        }
+    </script>
+</body>
+</html>
